@@ -16,8 +16,37 @@
         </ul>
     </div>
     <div class="xian"></div>
-    <div class="xiu">秀出自己风采</div>
-    <div class="sub">交给我们，为您省心省力，做出符合你心意的作品</div>
+
+    <a name="a1" id="a1">
+    <img class="bimg" src="images/01.jpg" />
+    <a name="a2" id="a2">
+    <img class="bimg" src="images/02.jpg" style="margin-top: -5px;" />
+    <a name="a3" id="a3">
+    <img class="bimg" src="images/03.jpg" style="margin-top: -5px;" />
 
 </body>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $('ul.navigate li').each(function() {
+            $(this).click(function(){
+                $('ul.navigate li').each(function() {
+                    $(this).removeClass('active');
+                });
+                $(this).addClass('active');
+                
+                if ($(this).html() == '关于我们') {
+                    $("html,body").stop(true);
+                    $("html,body").animate({scrollTop: $("#a3").offset().top}, 1000);
+                } else if ($(this).html() =='产品介绍') {
+                    $("html,body").stop(true);
+                    $("html,body").animate({scrollTop: $("#a2").offset().top}, 1000);
+                } else if ($(this).html() == '效果展示') {
+                    $("html,body").stop(true);
+                    $("html,body").animate({scrollTop: $("#a1").offset().top}, 1000);
+                }
+            });
+        });
+    });
+</script>
 </html>

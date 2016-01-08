@@ -18,12 +18,17 @@ body {
     height: 40px;
     width: 100%;
     overflow: hidden;
+    position: fixed;
+    z-index: 99;
+    background-color: #fff;
 }
 
 .xian {
     width: 100%;
     height: 1px;
     background-color: #ddd;
+    margin-top: 40px;
+    position: fixed;
 }
 
 .nav img {
@@ -88,4 +93,9 @@ ul.navigate li.active {
     display: block;
     margin: 0 auto;
     z-index: 999;
+}
+
+.bimg {
+    display: block;
+    width: 100%;
 }
